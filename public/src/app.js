@@ -16,8 +16,8 @@ app.set('view engine','hbs')
 app.set('views',pathtoviews)
 hbs.registerPartials(pathpartials)
 
-const geocode=require('./public/utils/geocode.js')
-const forecast=require('./public/utils/forecast.js')
+const geocode=require('./utils/geocode.js')
+const forecast=require('./utils/forecast.js')
 
 app.get('',(req,res)=>{
       res.render('index',{
