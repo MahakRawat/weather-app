@@ -3,7 +3,7 @@ const path=require('path')
 const hbs=require('hbs')
 
 const app= express()   //expressjs.com/reference API
-
+const port= process.env.PORT ||3000
 // defining paths 
 const pathtopublic=path.join(__dirname,'/public')
 const pathtoviews =path.join(__dirname,'/templates/views')
@@ -80,6 +80,6 @@ app.get('*',(req,res)=>{
    })
 })
 
-app.listen(3000,()=>{
+app.listen(port,()=>{
     console.log('server is up')
 })
